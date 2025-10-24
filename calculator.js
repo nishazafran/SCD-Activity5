@@ -1,4 +1,3 @@
-// calculator.js
 function add(a, b) {
   return a + b;
 }
@@ -12,8 +11,18 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-  if (b === 0) throw new Error('Cannot divide by zero');
+  if (b === 0) {
+    throw new Error("Cannot divide by zero");
+  }
   return a / b;
 }
 
-module.exports = { add, subtract, multiply, divide };
+// ✅ New function
+function modulus(a, b) {
+  if (b === 0) {
+    throw new Error("Cannot take modulus by zero");
+  }
+  return a % b;
+}
+
+module.exports = { add, subtract, multiply, divide, modulus };
